@@ -1,0 +1,12 @@
+import java.util.Arrays;
+
+class BitMarchArray {
+  static int[][] BitMarch(final int n) {
+    final int rows = 8 - n + 1;
+    final int[][] result = new int[rows][8];
+    for (int r = 0; r < rows; r++) {
+      Arrays.fill(result[r], 8 - n - r, 8 - r, 1);
+    }
+    return result;
+  }
+}
